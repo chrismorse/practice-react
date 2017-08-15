@@ -1,10 +1,21 @@
 ﻿import React from 'react';
 
-export default class App extends React.Component {
+class App extends React.Component {
+	state = { counter: 0 }
+  
+  handleClick = () => {
+  	this.setState({
+    	counter: this.state.counter + 1
+    })
+  };
+  
   render() {
     return (
-     <div style={{textAlign: 'center'}}>
-        <h1>Hello World</h1>
-      </div>);
+      <button onClick={this.handleClick}>
+        {this.state.counter}
+      </button>
+    );
   }
 }
+
+module.exports = App;

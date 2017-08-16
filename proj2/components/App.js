@@ -26,7 +26,6 @@ class Form extends React.Component {
   
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Event: Form Submit", this.state.userName)
     axios.get(`https://api.github.com/users/${this.state.userName}`)
       .then(resp => {
          this.props.onSubmit(resp.data)
@@ -39,7 +38,7 @@ class Form extends React.Component {
       <form onSubmit={this.handleSubmit}> 
         <input type="text"
         value={this.state.userName} 
-        onChange={(event) => this.setState({ userName: event.target.value})}
+        onChange={(event) => this.setState({ userName: event.target.value})}  //makes this a controlled component
         placeholder="Github username" required />
         <button type="submit">Add card</button>
       </form>

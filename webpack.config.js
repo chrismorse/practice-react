@@ -2,13 +2,13 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './proj2/index.html',
+  template: './proj3/index.html',
   filename: 'index.html',
   inject: 'body'
 })
 
 module.exports = {
-  entry: './proj2/index.js',
+  entry: './proj3/index.js',
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'

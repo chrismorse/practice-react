@@ -29,7 +29,6 @@ const Stars = (props) => {
 }
 
 const Button = (props) => {
-  
   let button;
   switch(props.answerIsCorrect) {
     case true:
@@ -63,7 +62,6 @@ const Button = (props) => {
 }
 
 const Answer = (props) => {
-
   return (
     <div className="col-5">
       {props.selectedNumbers.map((num,i) =>
@@ -170,8 +168,6 @@ class Game extends React.Component {
     const possibleNumbers = _.range(1,10).filter(number => 
       usedNumbers.indexOf(number) === -1
     );
-    console.log(possibleCombinationSum(possibleNumbers, numberOfStars))
-
     return possibleCombinationSum(possibleNumbers, numberOfStars);
   }
 
